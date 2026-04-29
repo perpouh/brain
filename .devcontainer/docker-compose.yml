@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  mcp:
+    build: ./mcp
+    container_name: mcp-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../vault:/vault  # Obsidian データレイクをマウント
+    environment:
+      OLLAMA_HOST: http://host.docker.internal:11434
+      VAULT_PATH: /vault
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

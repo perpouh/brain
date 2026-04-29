@@ -1,0 +1,21 @@
+{
+	"dockerComposeFile": "./docker-compose.yml",
+	"service": "devcontainer",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "22"
+		}
+	},
+	"postCreateCommand": "echo 'DevContainer setup completed!'",
+	"workspaceFolder": "/app"
+	// "portsAttributes": {
+	// 	"3000": {
+	// 		"label": "Development Server",
+	// 		"onAutoForward": "notify"
+	// 	},
+	// 	"8080": {
+	// 		"label": "API Server",
+	// 		"onAutoForward": "notify"
+	// 	}
+	// },
+}
